@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b192c">
+<meta name="description" content="WEBNEX creates modern, creative and user-friendly websites for people and businesses.">
+<title>WEBNEX | Websites That Make Ideas Real</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b192c;--surface:#10233b;--card:#122740;--text:#f5f7fb;--muted:#9aabc0;--orange:#ff7900;--line:rgba(255,255,255,.09);--nav:rgba(11,25,44,.85);--shadow:0 20px 60px rgba(0,0,0,.2)}
+body.light{--bg:#f4f6fa;--surface:#fff;--card:#fff;--text:#102039;--muted:#627087;--line:rgba(10,30,55,.12);--nav:rgba(244,246,250,.88);--shadow:0 20px 60px rgba(30,50,80,.09)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;overflow-x:hidden;transition:background .3s,color .3s}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+::selection{background:var(--orange);color:white}
+.container{width:min(1120px,90%);margin:auto}
+.orange{color:var(--orange)}.mono{font-family:"DM Mono",monospace;color:var(--orange);font-size:12px;letter-spacing:2px}
+.section{padding:105px 0}.section-heading{margin-bottom:42px}
+.section-heading h2{font-size:clamp(30px,5vw,48px);letter-spacing:-2px;margin-top:12px}
+.section-heading p{color:var(--muted);margin-top:12px;line-height:1.8;font-size:14px}
+header{position:fixed;top:0;left:0;width:100%;z-index:100;background:var(--nav);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:900;letter-spacing:-1.5px}.logo span{color:var(--orange)}
+.nav-links{display:flex;gap:27px;align-items:center}.nav-links a{font-size:13px;color:var(--muted);transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--orange)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.icon-btn{width:39px;height:39px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:50%;display:grid;place-items:center;font-size:17px}
+.menu-btn{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:8px;font-size:13px;font-weight:700;border:1px solid transparent;transition:.3s}
+.btn-primary{background:var(--orange);color:white}.btn-primary:hover{background:#e66c00;transform:translateY(-3px);box-shadow:0 10px 30px #ff790044}
+.btn-outline{border-color:var(--line);color:var(--text)}.btn-outline:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-3px)}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:140px 0 80px;overflow:hidden}
+.hero:before{content:"";position:absolute;width:520px;height:520px;background:var(--orange);filter:blur(170px);opacity:.12;right:-130px;top:100px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:65px;align-items:center}
+.availability{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border:1px solid var(--line);border-radius:30px;color:var(--muted);font-size:12px;margin-bottom:30px}
+.dot{width:8px;height:8px;border-radius:50%;background:#39d98a;box-shadow:0 0 12px #39d98a}
+.hero h1{font-size:clamp(48px,7vw,83px);line-height:1.07;letter-spacing:-5px;font-weight:900}
+.hero h1 .line{display:block}.hero h1 .highlight{color:var(--orange)}
+.hero-description{color:var(--muted);font-size:15px;line-height:1.9;max-width:510px;margin:25px 0 30px}
+.hero-buttons{display:flex;gap:13px;flex-wrap:wrap}.hero-bottom{display:flex;gap:35px;margin-top:55px}
+.hero-stat strong{font-size:22px;display:block}.hero-stat span{font-size:11px;color:var(--muted);margin-top:5px;display:block}
+.hero-art{position:relative;display:flex;justify-content:center;align-items:center}
+.orbit{width:min(390px,85vw);aspect-ratio:1;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;position:relative}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid var(--line);border-radius:50%;width:80%;height:80%}.orbit:after{width:60%;height:60%}
+.orbit-center{width:46%;height:46%;border-radius:30px;background:linear-gradient(145deg,#193b5d,#0c1b30);border:1px solid #ff790055;display:grid;place-items:center;position:relative;z-index:2;box-shadow:0 0 80px #ff790022}
+.initials{font-size:85px;font-weight:900;letter-spacing:-9px;color:white}.initials span{color:var(--orange)}
+.float-card{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px;box-shadow:var(--shadow);font-size:12px;z-index:3;animation:float 4s ease-in-out infinite}
+.float-card small{display:block;color:var(--muted);margin-top:5px}.float-one{top:14%;right:-3%}.float-two{bottom:15%;left:-4%;animation-delay:1.5s}
+@keyframes float{50%{transform:translateY(-12px)}}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.about-text{color:var(--muted);font-size:14px;line-height:2}.about-text p+p{margin-top:18px}
+.about-box{margin-top:25px;padding:23px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.about-box strong{display:block;margin-bottom:9px}.about-box p{font-size:13px;color:var(--muted);line-height:1.8}
+.about-details{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.detail{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;transition:.3s}
+.detail:hover{border-color:var(--orange);transform:translateY(-4px)}
+.detail-icon{font-size:22px;margin-bottom:18px}.detail strong{font-size:14px;display:block}.detail span{color:var(--muted);font-size:11px;display:block;margin-top:7px}
+.skills-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.skill{background:var(--surface);border:1px solid var(--line);padding:25px 15px;border-radius:12px;text-align:center;transition:.3s}
+.skill:hover{transform:translateY(-7px);border-color:var(--orange)}.skill-icon{font-size:29px;margin-bottom:15px}
+.skill strong{font-size:13px;display:block}.skill small{color:var(--muted);font-size:10px;display:block;margin-top:8px}
+.skill-note{margin-top:22px;color:var(--muted);font-size:12px}
+.project-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:25px}
+.filter{background:var(--surface);color:var(--muted);border:1px solid var(--line);padding:9px 16px;border-radius:30px;font-size:12px}
+.filter.active,.filter:hover{background:var(--orange);color:white;border-color:var(--orange)}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:23px}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:15px;overflow:hidden;transition:.35s}
+.project:hover{transform:translateY(-7px);border-color:#ff790077;box-shadow:var(--shadow)}
+.project-preview{height:220px;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#102a48,#1d3752)}
+.project-preview.orange-bg{background:linear-gradient(135deg,#45220e,#a84a0b)}.project-preview.purple-bg{background:linear-gradient(135deg,#211d48,#493d78)}
+.preview-window{width:72%;height:75%;background:#0b192c;border:1px solid #ffffff22;border-radius:10px;padding:12px;box-shadow:0 15px 40px #0005;transform:rotate(-3deg);transition:.4s}
+.project:hover .preview-window{transform:rotate(0) scale(1.04)}
+.preview-top{height:8px;display:flex;gap:4px;margin-bottom:14px}.preview-top i{width:6px;height:6px;background:#ff7900;border-radius:50%}
+.preview-line{height:6px;background:#34516d;border-radius:5px;margin:8px 0;width:70%}.preview-line.short{width:40%}
+.preview-blocks{display:flex;gap:7px;margin-top:15px}.preview-blocks i{height:48px;flex:1;background:#173652;border-radius:5px}
+.project-info{padding:23px}.project-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.project-top h3{font-size:19px}.project-type{font-size:10px;color:var(--orange);font-family:"DM Mono",monospace}
+.project-info p{color:var(--muted);font-size:12px;line-height:1.8;margin:13px 0 18px}
+.tags{display:flex;gap:7px;flex-wrap:wrap}.tags span{font-size:10px;color:var(--muted);padding:6px 9px;background:var(--bg);border-radius:5px}
+.project-link{display:inline-flex;margin-top:20px;color:var(--orange);font-size:12px;font-weight:700}.project[hidden]{display:none}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.service{padding:27px;background:var(--surface);border:1px solid var(--line);border-radius:13px;transition:.3s}
+.service:hover{border-color:var(--orange);transform:translateY(-5px)}.service-icon{font-size:28px;margin-bottom:20px}
+.service h3{font-size:16px;margin-bottom:12px}.service p{font-size:12px;color:var(--muted);line-height:1.9}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{border-top:1px solid var(--line);padding:20px 12px 0 0}.step-number{font-family:"DM Mono";color:var(--orange);font-size:12px}
+.step h3{font-size:15px;margin:15px 0 10px}.step p{color:var(--muted);font-size:12px;line-height:1.8}
+.contact-box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact-copy h2{font-size:clamp(30px,4vw,45px);letter-spacing:-2px;margin:15px 0}
+.contact-copy p{font-size:13px;line-height:1.9;color:var(--muted)}
+.contact-method{margin-top:30px}.contact-method span{display:block;color:var(--muted);font-size:11px;margin-bottom:8px}
+.contact-method a{color:var(--orange);font-size:13px}
+.contact-form{display:grid;gap:13px}.contact-form input,.contact-form textarea{width:100%;padding:15px;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--text);font:13px Inter;outline:none;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--orange)}.contact-form textarea{min-height:120px}
+.contact-form button{width:100%}.form-note{color:var(--muted);font-size:10px;line-height:1.6}
+footer{border-top:1px solid var(--line);padding:30px 0}
+.footer-content{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.footer-content p{font-size:11px;color:var(--muted)}.socials{display:flex;gap:18px}
+.socials a{font-size:12px;color:var(--muted)}.socials a:hover{color:var(--orange)}
+.back-top{position:fixed;right:23px;bottom:23px;width:42px;height:42px;background:var(--orange);color:white;border:0;border-radius:10px;opacity:0;pointer-events:none;transition:.3s;z-index:50}
+.back-top.show{opacity:1;pointer-events:auto}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:translateY(0)}
+.cursor-glow{position:fixed;width:220px;height:220px;pointer-events:none;background:radial-gradient(circle,#ff790012,transparent 70%);transform:translate(-50%,-50%);z-index:-1}
+.clock{font-family:"DM Mono";font-size:11px;color:var(--muted)}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:60px}.hero-art{max-width:450px;margin:auto;width:100%}.about-grid{grid-template-columns:1fr;gap:35px}.skills-grid{grid-template-columns:repeat(3,1fr)}.services-grid{grid-template-columns:repeat(2,1fr)}.contact-box{padding:30px;gap:30px}}
+@media(max-width:650px){.section{padding:80px 0}.nav{height:68px}.menu-btn{display:grid}.nav-links{display:none;position:absolute;top:68px;left:0;width:100%;background:var(--surface);padding:25px 5%;flex-direction:column;align-items:flex-start;gap:22px;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.hero{padding-top:120px}.hero h1{letter-spacing:-3px}.hero-bottom{gap:22px}.hero-stat strong{font-size:19px}.orbit{width:300px}.initials{font-size:65px}.float-one{right:-2%}.float-two{left:-2%}.projects-grid{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr}.process{grid-template-columns:repeat(2,1fr);row-gap:30px}.contact-box{grid-template-columns:1fr;padding:24px}.skills-grid{grid-template-columns:repeat(2,1fr)}.detail{padding:16px}.footer-content{justify-content:center;text-align:center}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="cursor-glow" id="glow"></div>
+<header><div class="container nav">
+<a class="logo" href="#home">WEBNEX<span>.</span></a>
+<nav class="nav-links" id="navLinks">
+<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a>
+</nav>
+<div class="nav-actions"><span class="clock" id="clock"></span><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☼</button><button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation">☰</button></div>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div class="reveal">
+<div class="availability"><span class="dot"></span> Learning • Building • Creating</div>
+<div class="mono">HELLO, I'M RIVANSH 👋</div>
+<h1>I Build Websites<span class="line">That Bring</span><span class="line highlight" id="changingText">Ideas to Life.</span></h1>
+<p class="hero-description">I'm an aspiring web developer creating modern, creative and user-friendly websites for people and businesses. I turn ideas into digital experiences.</p>
+<div class="hero-buttons"><a href="#projects" class="btn btn-primary">Explore My Work ↗</a><a href="#contact" class="btn btn-outline">Let's Connect</a></div>
+<div class="hero-bottom"><div class="hero-stat"><strong>01+</strong><span>Creative mindset</span></div><div class="hero-stat"><strong>24/7</strong><span>Curiosity to learn</span></div><div class="hero-stat"><strong>∞</strong><span>Ideas to explore</span></div></div>
+</div>
+<div class="hero-art reveal"><div class="orbit"><div class="orbit-center"><div class="initials">R<span>.</span></div></div><div class="float-card float-one">✦ Creative Developer<small>Turning ideas into websites</small></div><div class="float-card float-two">⌨ HTML / CSS / JS<small>Always learning something new</small></div></div></div>
+</div></section>
+<section class="section" id="about"><div class="container">
+<div class="section-heading reveal"><div class="mono">01 / ABOUT ME</div><h2>A little about <span class="orange">me.</span></h2><p>Curiosity is where every great idea begins.</p></div>
+<div class="about-grid"><div class="about-text reveal">
+<p>Hey! I'm Rivansh, a student and aspiring web developer passionate about creating digital experiences.</p>
+<p>I enjoy exploring website development, experimenting with creative UI designs and learning modern web technologies. For me, every project is an opportunity to learn, improve and create something meaningful.</p>
+<p>My focus is on building websites that look great, feel smooth and are easy for people to use.</p>
+<div class="about-box"><strong>My philosophy ✦</strong><p>Think creatively. Build consistently. Improve every day.</p></div>
+</div><div class="about-details reveal">
+<div class="detail"><div class="detail-icon">💻</div><strong>Web Development</strong><span>Building for the web</span></div>
+<div class="detail"><div class="detail-icon">🎨</div><strong>Creative UI</strong><span>Clean visual experiences</span></div>
+<div class="detail"><div class="detail-icon">⚡</div><strong>Modern Tech</strong><span>Learning new technologies</span></div>
+<div class="detail"><div class="detail-icon">🤖</div><strong>AI Exploration</strong><span>Exploring AI-assisted tools</span></div>
+</div></div></div></section>
+<section class="section" id="skills"><div class="container">
+<div class="section-heading reveal"><div class="mono">02 / MY TOOLKIT</div><h2>Skills & <span class="orange">technologies.</span></h2><p>The tools I'm learning and using to bring ideas to life.</p></div>
+<div class="skills-grid reveal">
+<div class="skill"><div class="skill-icon">🌐</div><strong>HTML5</strong><small>Web structure</small></div>
+<div class="skill"><div class="skill-icon">🎨</div><strong>CSS3</strong><small>Visual styling</small></div>
+<div class="skill"><div class="skill-icon">⚡</div><strong>JavaScript</strong><small>Interactivity</small></div>
+<div class="skill"><div class="skill-icon">📱</div><strong>Responsive Design</strong><small>Multi-device layouts</small></div>
+<div class="skill"><div class="skill-icon">🐙</div><strong>GitHub</strong><small>Version control</small></div>
+</div><p class="skill-note">Skills are continuously developing as I learn and build more projects.</p>
+</div></section>
+<section class="section" id="projects"><div class="container">
+<div class="section-heading reveal"><div class="mono">03 / SELECTED WORK</div><h2>Things I've <span class="orange">created.</span></h2><p>A collection of ideas, experiments and projects I'm working on.</p></div>
+<div class="project-toolbar reveal"><button class="filter active" data-filter="all">All Projects</button><button class="filter" data-filter="web">Websites</button><button class="filter" data-filter="product">Digital Products</button></div>
+<div class="projects-grid">
+<article class="project reveal" data-category="product"><div class="project-preview"><div class="preview-window"><div class="preview-top"><i></i><i></i><i></i></div><div style="color:#ff7900;font-size:14px;font-weight:bold">MECHNEX</div><div class="preview-line"></div><div class="preview-line short"></div><div class="preview-blocks"><i></i><i></i><i></i></div></div></div><div class="project-info"><div class="project-top"><h3>MECHNEX</h3><span class="project-type">01 / PLATFORM</span></div><p>A service marketplace concept designed to connect customers with professional home service providers.</p><div class="tags"><span>Product Design</span><span>Web Development</span><span>Marketplace</span></div><a class="project-link" href="#contact">Discuss this project ↗</a></div></article>
+<article class="project reveal" data-category="web"><div class="project-preview orange-bg"><div class="preview-window"><div class="preview-top"><i></i><i></i><i></i></div><div style="color:#ff7900;font-size:14px;font-weight:bold">HAPPY BIRTHDAY!</div><div class="preview-line"></div><div class="preview-line short"></div><div class="preview-blocks"><i></i><i></i><i></i></div></div></div><div class="project-info"><div class="project-top"><h3>Birthday Experience</h3><span class="project-type">02 / WEBSITE</span></div><p>A personalized birthday website with memories, animations, music and interactive surprises.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="project-link" href="#contact">Discuss this project ↗</a></div></article>
+<article class="project reveal" data-category="web"><div class="project-preview purple-bg"><div class="preview-window"><div class="preview-top"><i></i><i></i><i></i></div><div style="color:#b5a5ff;font-size:14px;font-weight:bold">YOUR BRAND</div><div class="preview-line"></div><div class="preview-line short"></div><div class="preview-blocks"><i></i><i></i><i></i></div></div></div><div class="project-info"><div class="project-top"><h3>Creative Websites</h3><span class="project-type">03 / EXPERIMENT</span></div><p>Exploring modern website layouts, brand identity, animations and user interface concepts.</p><div class="tags"><span>UI Design</span><span>CSS</span><span>Creative</span></div><a class="project-link" href="#contact">Discuss this project ↗</a></div></article>
+<article class="project reveal" data-category="product"><div class="project-preview"><div class="preview-window"><div class="preview-top"><i></i><i></i><i></i></div><div style="color:#ff7900;font-size:14px;font-weight:bold">NEW IDEAS</div><div class="preview-line"></div><div class="preview-line short"></div><div class="preview-blocks"><i></i><i></i><i></i></div></div></div><div class="project-info"><div class="project-top"><h3>Future Experiments</h3><span class="project-type">04 / EXPLORATION</span></div><p>Small development experiments and new concepts as I explore the possibilities of technology.</p><div class="tags"><span>Learning</span><span>Technology</span><span>Experiments</span></div><a class="project-link" href="#contact">Discuss this project ↗</a></div></article>
+</div></div></section>
+<section class="section" id="services"><div class="container">
+<div class="section-heading reveal"><div class="mono">04 / WHAT I CAN BUILD</div><h2>Ideas into <span class="orange">websites.</span></h2><p>Website solutions for individuals, creators and small businesses.</p></div>
+<div class="services-grid">
+<div class="service reveal"><div class="service-icon">🏢</div><h3>Business Websites</h3><p>Modern online presence for small businesses, shops and local services.</p></div>
+<div class="service reveal"><div class="service-icon">👤</div><h3>Personal Portfolios</h3><p>Personal websites to showcase your work, skills and achievements.</p></div>
+<div class="service reveal"><div class="service-icon">🛍️</div><h3>Landing Pages</h3><p>Focused web pages for products, services and special campaigns.</p></div>
+<div class="service reveal"><div class="service-icon">🎉</div><h3>Special Occasion Websites</h3><p>Personalized digital experiences for birthdays and celebrations.</p></div>
+<div class="service reveal"><div class="service-icon">📱</div><h3>Responsive Design</h3><p>Layouts designed to work across mobile phones, tablets and desktops.</p></div>
+<div class="service reveal"><div class="service-icon">✨</div><h3>Website Redesign</h3><p>Fresh visual concepts and improved user experiences for existing websites.</p></div>
+</div></div></section>
+<section class="section"><div class="container">
+<div class="section-heading reveal"><div class="mono">05 / MY WORKFLOW</div><h2>From idea to <span class="orange">reality.</span></h2><p>A simple approach to creating a website.</p></div>
+<div class="process">
+<div class="step reveal"><span class="step-number">01 / DISCOVER</span><h3>Understand</h3><p>Understand your idea, audience and website requirements.</p></div>
+<div class="step reveal"><span class="step-number">02 / DESIGN</span><h3>Plan</h3><p>Plan the layout, visual direction and user experience.</p></div>
+<div class="step reveal"><span class="step-number">03 / DEVELOP</span><h3>Build</h3><p>Turn the approved design into a working website.</p></div>
+<div class="step reveal"><span class="step-number">04 / DELIVER</span><h3>Launch</h3><p>Test the website and prepare it for publishing.</p></div>
+</div></div></section>
+<section class="section" id="contact"><div class="container"><div class="contact-box reveal">
+<div class="contact-copy"><div class="mono">06 / GET IN TOUCH</div><h2>Have an idea?<br><span class="orange">Let's build it.</span></h2><p>Have a website idea or a project in mind? Contact WEBNEX directly by phone or WhatsApp. No contact form needed.</p>
+<div class="contact-method"><span>CALL / WHATSAPP</span><a href="tel:+918292981516">+91 82929 81516 ↗</a></div>
+<div class="contact-method"><span>BASED IN</span><p>India 🇮🇳</p></div></div>
+<div class="contact-form" style="align-content:center;gap:16px"><div style="font-size:12px;color:var(--muted);line-height:1.8">Ready to discuss your website? Choose how you would like to connect.</div><a class="btn btn-primary" href="https://wa.me/918292981516" target="_blank" rel="noopener">Chat on WhatsApp ↗</a><a class="btn btn-outline" href="tel:+918292981516">Call Now ↗</a><p class="form-note">Please contact during reasonable hours. Share only the project details needed to discuss your website.</p></div>
+</div></div></section>
+</main>
+<footer><div class="container footer-content"><a class="logo" href="#home">WEBNEX<span>.</span></a><p>© <span id="year"></span> WEBNEX. Built with curiosity & code.</p><div class="socials"><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="#contact">Contact ↗</a></div></div></footer>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+<script>
+const menuBtn=document.getElementById("menuBtn"),navLinks=document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("open");menuBtn.textContent=navLinks.classList.contains("open")?"✕":"☰"});
+document.querySelectorAll(".nav-links a").forEach(link=>link.addEventListener("click",()=>{navLinks.classList.remove("open");menuBtn.textContent="☰"}));
+const themeBtn=document.getElementById("themeBtn");
+themeBtn.addEventListener("click",()=>{document.body.classList.toggle("light");const light=document.body.classList.contains("light");themeBtn.textContent=light?"☾":"☼";document.querySelector('meta[name="theme-color"]').content=light?"#f4f6fa":"#0b192c"});
+function updateClock(){document.getElementById("clock").textContent=new Intl.DateTimeFormat("en-IN",{timeZone:"Asia/Kolkata",hour:"2-digit",minute:"2-digit",hour12:true}).format(new Date())+" IST"}updateClock();setInterval(updateClock,30000);
+const words=["Ideas to Life.","Digital Dreams.","Creative Ideas.","Your Vision."];let wordIndex=0;
+setInterval(()=>{const target=document.getElementById("changingText");target.style.opacity="0";setTimeout(()=>{wordIndex=(wordIndex+1)%words.length;target.textContent=words[wordIndex];target.style.opacity="1"},250)},3000);
+document.getElementById("changingText").style.transition="opacity .25s";
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+document.querySelectorAll(".filter").forEach(button=>button.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));button.classList.add("active");const selected=button.dataset.filter;document.querySelectorAll(".project").forEach(project=>{project.hidden=selected!=="all"&&project.dataset.category!==selected})}));
+const backTop=document.getElementById("backTop");window.addEventListener("scroll",()=>backTop.classList.toggle("show",window.scrollY>450));backTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+const glow=document.getElementById("glow");if(window.matchMedia("(pointer:fine)").matches){document.addEventListener("mousemove",e=>{glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"})}else{glow.style.display="none"}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+const sections=document.querySelectorAll("main section[id]");const navObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)document.querySelectorAll(".nav-links a").forEach(link=>link.classList.toggle("active",link.getAttribute("href")==="#"+entry.target.id))}),{rootMargin:"-30% 0px -60% 0px"});sections.forEach(section=>navObserver.observe(section));
+</script>
+</body>
+</html>
